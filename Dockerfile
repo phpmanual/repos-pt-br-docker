@@ -25,3 +25,4 @@ RUN export REPOSITORIES_PATH="/php-manual-pt-br" && \
     [ -d `pwd`/web-php/manual/en ] && rm -r `pwd`/web-php/manual/en && \
     ln -s `pwd`/build-en/php-web `pwd`/web-php/manual/en && \
     \
+    true
