@@ -22,10 +22,10 @@ RUN php doc-base/configure.php --enable-xml-details \
 
 WORKDIR $REPOSITORIES_PATH
 
-RUN [ -d `pwd`/web-php/manual/pt_BR ] && rm -r `pwd`/web-php/manual/pt_BR
+RUN [ -d `pwd`/web-php/manual/pt_BR ] && rm -r `pwd`/web-php/manual/pt_BR || true
 
 RUN ln -s `pwd`/build/pt_BR/php-web `pwd`/web-php/manual/pt_BR
 
-RUN [ -d `pwd`/web-php/manual/en ] && rm -r `pwd`/web-php/manual/en
+RUN [ -d `pwd`/web-php/manual/en ] && rm -r `pwd`/web-php/manual/en || true
     
 RUN ln -s `pwd`/build/en/php-web `pwd`/web-php/manual/en
